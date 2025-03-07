@@ -1,9 +1,9 @@
 version: '3.8'
 
 services:
-  telegram-bot:
+  userinfo:
     build: .
-    container_name: telegram-bot
+    container_name: userinfo
     environment:
       TELEGRAM_BOT_TOKEN: "${TELEGRAM_BOT_TOKEN}"  # Replace with your bot token
     restart: unless-stopped
