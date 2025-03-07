@@ -6,6 +6,8 @@ services:
     container_name: userinfo
     environment:
       TELEGRAM_BOT_TOKEN: "${TELEGRAM_BOT_TOKEN}"  # Replace with your bot token
+      PROXY_HOST: "${PROXY_HOST}"  # Replace with your proxy host
+      PROXY_PORT: "${PROXY_PORT}"  # Replace with your proxy port
     restart: unless-stopped
     volumes:
       - ./user_data:/app/user_data  # Persist user data outside the container
