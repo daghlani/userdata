@@ -7,4 +7,6 @@ services:
     environment:
       TELEGRAM_BOT_TOKEN: "${TELEGRAM_BOT_TOKEN}"  # Replace with your bot token
     restart: unless-stopped
+    volumes:
+      - ./user_data:/app/user_data  # Persist user data outside the container
     network_mode: host
