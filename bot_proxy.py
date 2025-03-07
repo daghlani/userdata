@@ -12,7 +12,7 @@ USER_DATA_DIR = "user_data"
 os.makedirs(USER_DATA_DIR, exist_ok=True)
 
 # Set up the proxy
-socks.set_default_proxy(socks.SOCKS5, "localhost", 2080)  # Use the service name as the host
+socks.set_default_proxy(socks.SOCKS5, os.getenv('PROXY_HOST', "localhost"), int(os.getenv('PROXY_PORT', 2080)))
 socket.socket = socks.socksocket
 
 def escape_markdown(text: str) -> str:
