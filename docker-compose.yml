@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  telegram-bot:
+    build: .
+    container_name: telegram-bot
+    environment:
+      TELEGRAM_BOT_TOKEN: "${TELEGRAM_BOT_TOKEN}"  # Replace with your bot token
+    restart: unless-stopped
+    network_mode: host
